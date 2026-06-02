@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jara Tech Club Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Jara Tech Club</h1>
+
+<div id="start-screen">
+
+<input type="text" id="studentName" placeholder="Enter Your Name">
+
+<select id="rank">
+<option value="">Select Your Rank</option>
+<option>Beginner</option>
+<option>Junior Scientist</option>
+<option>Senior Scientist</option>
+<option>Tech Leader</option>
+</select>
+
+<select id="branch">
+
+<option value="">Select Science Branch</option>
+
+<option>Astronomy</option>
+<option>Geology</option>
+<option>Biology</option>
+<option>Robotics</option>
+<option>Programming</option>
+<option>Physics</option>
+<option>Chemistry</option>
+
+</select>
+
+<textarea id="notes" placeholder="Write your science notes here..."></textarea>
+
+<button onclick="saveProfile()">Save Dashboard</button>
+
+<button onclick="startExam()">Start CBT Exam</button>
+
+</div>
+
+<div id="profile-box" class="hidden">
+
+<h2>Student Dashboard</h2>
+
+<div class="profile-card">
+
+<p><strong>Name:</strong> <span id="display-name"></span></p>
+
+<p><strong>Rank:</strong> <span id="display-rank"></span></p>
+
+<p><strong>Branch:</strong> <span id="display-branch"></span></p>
+
+</div>
+
+<div class="notes-box">
+
+<h3>Your Notes</h3>
+
+<p id="display-notes"></p>
+
+</div>
+
+</div>
+
+<div id="exam-screen" class="hidden">
+
+<div class="top-bar">
+
+<p id="timer">Time: 60</p>
+
+<p id="question-number"></p>
+
+</div>
+
+<h2 id="question"></h2>
+
+<div id="answers"></div>
+
+<button onclick="nextQuestion()">Next</button>
+
+</div>
+
+<div id="result-screen" class="hidden">
+
+<h2>Exam Finished</h2>
+
+<p id="final-score"></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
